@@ -32,6 +32,8 @@
 .divider-section__text {
 	float: left;
 	width: 500px;
+	padding-left: 20px;
+	box-sizing: border-box;
 }
 
 /* For decor only */
