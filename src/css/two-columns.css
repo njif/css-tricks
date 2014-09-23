@@ -1,0 +1,40 @@
+/*--- .clearfix; ---*/
+
+.divider-section__wrap {
+	*zoom: ~"expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif')";
+	zoom: 1 !ie;
+}
+
+.divider-section__wrap:before, .divider-section__wrap:after {
+	content: "";
+	display: table;
+}
+	
+.divider-section__wrap:after {
+	clear: both;
+}
+
+/*--- /.clearfix; ---*/
+
+.divider-section__wrap {
+	width: 900px;
+}
+
+.divider-section__pic {
+	float: left;
+	width: 400px;
+}
+
+.divider-section__pic img {
+	display: block;
+}
+
+.divider-section__text {
+	float: left;
+	width: 500px;
+}
+
+/* For decor only */
+.divider-section__text p:first-child {
+	margin-top: 0
+}

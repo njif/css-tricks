@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Two columns</title>
+	<link rel="stylesheet" href="css/two-columns.css">
+</head>
+<body>
+	<h1>Two columns</h1>
+	<dl>
+		<dt>1. HTML:</dt>
+		<dd>
+			<pre>
+&lt;div class="divider-section__wrap">
+	&lt;div class="divider-section__pic">
+		&lt;img src="http://lorempixel.com/400/200" alt="">
+	&lt;/div>
+&lt;/div>
+			</pre>
+		</dd>		
+
+		<dt>3. LESS:</dt>
+		<dd>
+			<pre>
+/* --- MIXINS --- */
+
+.clearfix {
+    *zoom: ~"expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif')";
+    zoom: 1 !ie;
+    
+    &:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	
+	&:after {
+		clear: both;
+	}
+}
+
+/* --- /MIXINS --- */
+
+.divider-section__wrap {
+	width: 900px;
+}
+
+.divider-section__pic {
+	float: left;
+	width: 400px;
+}
+
+.divider-section__pic img {
+	display: block;
+}
+
+.divider-section__text {
+	float: left;
+	width: 500px;
+}
+			</pre>
+		</dd>
+
+
+		<dt>4. RESULT:</dt>
+		<dd>
+			<div class="divider-section__wrap">
+				<div class="divider-section__pic">
+					<img src="http://lorempixel.com/400/200" alt="">	
+				</div>
+				<div class="divider-section__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam aliquid similique a veritatis nobis minus alias quod reiciendis. Officiis qui provident blanditiis quam eveniet, eum veritatis modi veniam quas minima delectus, quidem fuga tenetur commodi rerum laboriosam enim sed repellendus animi facilis ab consectetur debitis dolores. Porro iste illo non!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio tempora culpa rem eaque commodi tempore saepe voluptates, nam ducimus asperiores, nulla iure? Necessitatibus obcaecati sed aliquid, nihil voluptate eius.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iure earum soluta quos quas, corporis assumenda voluptas aliquam? Obcaecati, voluptates.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repellendus labore accusamus, laboriosam consequatur quaerat nam eum esse a saepe. Error, voluptatum sapiente voluptas quia. Fugit reprehenderit architecto voluptas dolorum ea esse necessitatibus quibusdam adipisci, dicta ipsam nam atque dolorem ipsa saepe eum veniam quo possimus iure! Consequatur, debitis, dolores!</p>
+				</div>
+			</div>
+
+		</dd>
+
+	</dl>
+	
+</body>
+</html>
