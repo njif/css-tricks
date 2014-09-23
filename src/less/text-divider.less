@@ -1,0 +1,29 @@
+.divider {
+	overflow: hidden; /* 1. Use overflow for limit divider, because lines will be very long */
+	text-align: center;
+}
+
+.divider__text {
+	.inlineblock;
+	position: relative;
+	padding: 10px;
+	text-transform: uppercase;
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		width: 2000px; /* Must be veeeeery looooong */
+		height: 1px;
+		background: #000000;
+		position: absolute;
+		top: 18px;
+	}
+	/* Often useful method: */
+	&:before {
+		right: 100%;
+	}
+
+	&:after {
+		left: 100%;
+	}
+}

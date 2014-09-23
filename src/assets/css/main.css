@@ -1,0 +1,138 @@
+/* --- MIXINS --- */
+.inlineblock {
+  /* --- mixin: .inlineblock: --- */
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  /* --- /.inlineblock: --- */
+}
+.clearfix {
+  /* --- mixin: .clearfix: --- */
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  /* --- /.clearfix: --- */
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* --- Button as image --- */
+.imgbutton {
+  background: url("../img/button.png") 0 0 no-repeat;
+  /* set background */
+  height: 56px;
+  /* height = image height */
+  padding-left: 13px;
+  /* padding-left = image first part width (15px) minus 2px/ It's bug fix for zoom */
+  /* --- mixin: .inlineblock: --- */
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  /* --- /.inlineblock: --- */
+}
+.imgbutton span {
+  color: #fff;
+  cursor: pointer;
+  height: 56px;
+  /* same height */
+  line-height: 56px;
+  padding-right: 13px;
+  background: url("../img/button.png") right 0 no-repeat;
+  /* --- mixin: .inlineblock: --- */
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  /* --- /.inlineblock: --- */
+}
+.divider {
+  overflow: hidden;
+  /* 1. Use overflow for limit divider, because lines will be very long */
+  text-align: center;
+}
+.divider__text {
+  /* --- mixin: .inlineblock: --- */
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  /* --- /.inlineblock: --- */
+  position: relative;
+  padding: 10px;
+  text-transform: uppercase;
+  /* Often useful method: */
+}
+.divider__text:before,
+.divider__text:after {
+  content: "";
+  display: block;
+  width: 2000px;
+  /* Must be veeeeery looooong */
+  height: 1px;
+  background: #000000;
+  position: absolute;
+  top: 18px;
+}
+.divider__text:before {
+  right: 100%;
+}
+.divider__text:after {
+  left: 100%;
+}
+.divider-fixed-section__wrap,
+.divider-resp-section__wrap {
+  /* --- mixin: .clearfix: --- */
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  /* --- /.clearfix: --- */
+}
+.divider-fixed-section__wrap:before,
+.divider-resp-section__wrap:before,
+.divider-fixed-section__wrap:after,
+.divider-resp-section__wrap:after {
+  content: "";
+  display: table;
+}
+.divider-fixed-section__wrap:after,
+.divider-resp-section__wrap:after {
+  clear: both;
+}
+/* --- fixed section --- */
+.divider-fixed-section__wrap {
+  width: 900px;
+}
+.divider-fixed-section__pic {
+  float: left;
+  width: 400px;
+}
+.divider-fixed-section__pic img {
+  display: block;
+}
+.divider-fixed-section__text {
+  float: left;
+  width: 500px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+/* --- /fixed section --- */
+/* --- resp section --- */
+.divider-resp-section__pic {
+  float: left;
+  width: 30%;
+}
+.divider-resp-section__pic img {
+  display: block;
+  width: 95%;
+}
+.divider-resp-section__text {
+  float: right;
+  width: 70%;
+}
+/* --- /resp section --- */
+/* --- for decor only --- */
+.divider-fixed-section__text p:first-child,
+.divider-resp-section__text p:first-child {
+  margin-top: 0;
+}

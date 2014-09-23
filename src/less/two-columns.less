@@ -1,22 +1,6 @@
-/* --- .clearfix; --- */
-
 .divider-fixed-section__wrap, .divider-resp-section__wrap {
-	*zoom: ~"expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif')";
-	zoom: 1 !ie;
+	.clearfix;
 }
-
-.divider-fixed-section__wrap:before, .divider-fixed-section__wrap:after,
-.divider-resp-section__wrap:before, .divider-resp-section__wrap:after
-{
-	content: "";
-	display: table;
-}
-
-.divider-fixed-section__wrap:after, .divider-resp-section__wrap:after {
-	clear: both;
-}
-
-/* --- /.clearfix; --- */
 
 /* --- fixed section --- */
 
@@ -27,10 +11,10 @@
 .divider-fixed-section__pic {
 	float: left;
 	width: 400px;
-}
 
-.divider-fixed-section__pic img {
-	display: block;
+	img {
+		display: block;
+	}
 }
 
 .divider-fixed-section__text {
@@ -47,11 +31,11 @@
 .divider-resp-section__pic {
 	float: left;
 	width: 30%;
-}
 
-.divider-resp-section__pic img {
-	display: block;
-	width: 95%;
+	img {
+		display: block;
+		width: 95%;
+	}
 }
 
 .divider-resp-section__text {

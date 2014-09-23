@@ -1,0 +1,20 @@
+{
+	"name": "some-css-tricks",
+	"version": "0.0.1",
+	"homepage": "https://github.com/njif/css-tricks",
+	"authors": [
+		"Anton Seroshtan <anton.seroshtan@gmail.com>"
+	],
+	"description": "some css tricks",
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"components-bootstrap": "~3.2.0"
+	}
+}
