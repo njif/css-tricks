@@ -1,0 +1,27 @@
+/* Верстка кнопки картинкой */
+.imgbutton {
+	background: url("../img/button.png") 0 0 no-repeat; /*Задаем background */
+	height: 56px; /* Задаем высоту = размеру заготовки */
+	padding-left: 13px; /* Делаем отступ слева - 2px (устраняет баг с zoom) на ширину скругления (15px - 2px) */
+	
+	/* inlineblock: */
+	display: inline-block;
+	vertical-align: top;	
+	zoom: 1 !ie;
+	display: inline !ie;
+}
+
+.imgbutton__text { /*Внутреннему контейнеру с текстом задаем ..  */
+	color: #fff;
+	cursor: pointer;
+	height: 56px; /* такую же высоту */
+	line-height: 56px;
+	padding-right:15px;	
+	background: url("../img/button.png") right 0 no-repeat;
+
+	/* inlineblock: */
+	display: inline-block;
+	vertical-align: top;	
+	zoom: 1 !ie;
+	display: inline !ie;
+}

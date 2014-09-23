@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Секретные техники CSS</title>
+	<link rel="stylesheet" href="css/image-button.css">
+</head>
+<body>
+	<h1>Button as image</h1>
+	<dl>
+		<dt>1. Image:</dt>
+		<dd><img src="img/button.png" alt=""></dd>
+
+		<dt>2. HTML:</dt>
+		<dd>
+			<pre>
+&lt;div class="imgbutton"&gt;&lt;span class="imgbutton__text"&gt;I am button&lt;/span&gt;&lt;/div&gt;
+			</pre>
+		</dd>		
+
+		<dt>3. LESS:</dt>
+		<dd>
+			<pre>
+
+/* ----  MIXINS ---- */
+
+.inlineblock {
+	display: inline-block;
+	vertical-align: top;
+	
+	zoom: 1 !ie;
+	display: inline !ie;
+}
+
+/* ---- /MIXINS ---- */
+
+.imgbutton {
+	background: url(/img/button.png) 0 0 no-repeat; /* set background */
+	height: 41px; /* height = image height */
+	padding-left: 13px; /* padding-left = image first part width (15px) minus 2px/ It's bug fix for zoom */
+	.inlineblock;
+
+	span {
+		.inlineblock;
+		height: 41px; /* same height */
+		line-height: 41px;
+		padding-right:15px;
+		background: url(/img/button.png) right 0 no-repeat;
+	}
+
+}
+			</pre>
+		</dd>
+
+
+		<dt>4. Result</dt>
+		<dd>
+			<div class="imgbutton"><span class="imgbutton__text">I am button</span></div>
+		</dd>
+
+	</dl>
+	
+</body>
+</html>
