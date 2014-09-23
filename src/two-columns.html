@@ -41,24 +41,58 @@
 
 /* --- /MIXINS --- */
 
-.divider-section__wrap {
+/* --- fixed section --- */
+
+.divider-fixed-section__wrap {
+	.clearfix;
 	width: 900px;
 }
 
-.divider-section__pic {
+.divider-fixed-section__pic {
 	float: left;
 	width: 400px;
 }
 
-.divider-section__pic img {
+.divider-fixed-section__pic img {
 	display: block;
 }
 
-.divider-section__text {
+.divider-fixed-section__text {
 	float: left;
 	width: 500px;
 	padding-left: 20px;
 	box-sizing: border-box;
+}
+
+/* --- /fixed section --- */
+
+/* --- resp section --- */
+
+.divider-resp-section__wrap {
+	.clearfix;
+	width: 900px;
+}
+
+.divider-resp-section__pic {
+	float: left;
+	width: 400px;
+}
+
+.divider-resp-section__pic img {
+	display: block;
+}
+
+.divider-resp-section__text {
+	float: left;
+	width: 500px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+/* --- for decor only --- */
+.divider-fixed-section__text p:first-child,
+.divider-resp-section__text p:first-child {
+	margin-top: 0
 }
 			</pre>
 		</dd>
@@ -66,18 +100,32 @@
 
 		<dt>4. RESULT:</dt>
 		<dd>
-			<div class="divider-section__wrap">
-				<div class="divider-section__pic">
+			<div class="divider-fixed-section__wrap">
+				<h2>Fixed section (width: 900px):</h2>
+				<div class="divider-fixed-section__pic">
 					<img src="http://lorempixel.com/400/200" alt="">	
 				</div>
-				<div class="divider-section__text">
+				<div class="divider-fixed-section__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam aliquid similique a veritatis nobis minus alias quod reiciendis. Officiis qui provident blanditiis quam eveniet, eum veritatis modi veniam quas minima delectus, quidem fuga tenetur commodi rerum laboriosam enim sed repellendus animi facilis ab consectetur debitis dolores. Porro iste illo non!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio tempora culpa rem eaque commodi tempore saepe voluptates, nam ducimus asperiores, nulla iure? Necessitatibus obcaecati sed aliquid, nihil voluptate eius.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iure earum soluta quos quas, corporis assumenda voluptas aliquam? Obcaecati, voluptates.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repellendus labore accusamus, laboriosam consequatur quaerat nam eum esse a saepe. Error, voluptatum sapiente voluptas quia. Fugit reprehenderit architecto voluptas dolorum ea esse necessitatibus quibusdam adipisci, dicta ipsam nam atque dolorem ipsa saepe eum veniam quo possimus iure! Consequatur, debitis, dolores!</p>
+				</div>
+
+
+			</div>
+			<div class="divider-resp-section__wrap">
+				<h2>Responsive section:</h2>
+				<div class="divider-resp-section__pic">
+					<img src="http://lorempixel.com/400/200" alt="">	
+				</div>
+				<div class="divider-resp-section__text">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam aliquid similique a veritatis nobis minus alias quod reiciendis. Officiis qui provident blanditiis quam eveniet, eum veritatis modi veniam quas minima delectus, quidem fuga tenetur commodi rerum laboriosam enim sed repellendus animi facilis ab consectetur debitis dolores. Porro iste illo non!</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio tempora culpa rem eaque commodi tempore saepe voluptates, nam ducimus asperiores, nulla iure? Necessitatibus obcaecati sed aliquid, nihil voluptate eius.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iure earum soluta quos quas, corporis assumenda voluptas aliquam? Obcaecati, voluptates.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repellendus labore accusamus, laboriosam consequatur quaerat nam eum esse a saepe. Error, voluptatum sapiente voluptas quia. Fugit reprehenderit architecto voluptas dolorum ea esse necessitatibus quibusdam adipisci, dicta ipsam nam atque dolorem ipsa saepe eum veniam quo possimus iure! Consequatur, debitis, dolores!</p>
 				</div>
 			</div>
-
 		</dd>
 
 	</dl>
