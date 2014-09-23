@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Float dividers with text</title>
+	<link rel="stylesheet" href="css/text-divider.css">
+</head>
+<body>
+	<h1>Float dividers with text</h1>
+	<dl>
+		<dt>1. HTML:</dt>
+		<dd>
+			<pre>
+&lt;div class="divider2">
+	&lt;div class="divider2__text">I am a divider&lt;/div>
+&lt;/div>
+			</pre>
+		</dd>		
+
+		<dt>3. LESS:</dt>
+		<dd>
+			<pre>
+
+/* --- MIXINS --- */
+
+.inlineblock {
+	display: inline-block;
+	vertical-align: top;
+	
+	zoom: 1 !ie;
+	display: inline !ie;
+}
+
+/* --- /MIXINS --- */
+
+.divider2 {
+	overflow: hidden; /* 1. Use overflow for limit divider, because lines will be very long */
+}
+.divider2__text {
+	text-align: center;
+	position: relative;
+	padding: 10px;
+
+	&:after, &:before; {
+		content: "";
+		.inlineblock;
+		position: absolute;
+		top: 10px;
+		width: 2000px; /* Must be veeeeery looooong */
+		height: 1px;
+		background: #000;
+	}
+	
+	/* Often useful method: */
+	&:after { 
+		left:100%;
+	}
+
+	&:before {
+		right:100%;
+	}
+}
+			</pre>
+		</dd>
+
+
+		<dt>4. Result</dt>
+		<dd>
+			<div class="divider">
+				<div class="divider__text">I am a divider</div>
+			</div>
+		</dd>
+
+	</dl>
+	
+</body>
+</html>
